@@ -14,7 +14,7 @@ RUN adduser \
 
 WORKDIR $GOPATH/src/github.com/rbicker/namedyn
 COPY . .
-RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o /go/bin/namedyn ./cmd/namedyn
+RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o /go/bin/namedyn .
 
 # ---
 
